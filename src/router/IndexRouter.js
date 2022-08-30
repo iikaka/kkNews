@@ -4,7 +4,6 @@ import Login from '../views/login/Login'
 import NewsSandBox from '../views/sandbox/NewsSandBox'
 export default function IndexRouter() {
   return (
-    <div>
       <HashRouter>
         <Switch>
             <Route path='/login' component={Login}/>
@@ -16,6 +15,5 @@ export default function IndexRouter() {
         }/>
         </Switch>
       </HashRouter>
-    </div>
   )
 }
