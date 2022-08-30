@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function NewsSandsBox() {
+export default function UserList() {
   return (
     <div>
-      newsSandBox
+      userList
     </div>
   )
 }

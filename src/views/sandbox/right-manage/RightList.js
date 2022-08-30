@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Notmatch() {
+export default function RightList() {
   return (
     <div>
-        404 未找到资源
+      RightList
     </div>
   )
 }

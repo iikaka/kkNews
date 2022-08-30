@@ -1,23 +1,21 @@
 import React from 'react'
-import {HashRouter,Redirect,Route, Switch} from 'react-router-dom'
-import Login from '../view/login/Login'
-import Detail from '../view/news/Detail'
-import News from '../view/news/News'
-import NewsSanbox from '../view/newssanbox/NewsSanbox'
-export default function indexRouter() {
+import {HashRouter, Redirect, Route,Switch} from 'react-router-dom'
+import Login from '../views/login/Login'
+import NewsSandBox from '../views/sandbox/NewsSandBox'
+export default function IndexRouter() {
   return (
-    <HashRouter>
+    <div>
+      <HashRouter>
         <Switch>
-        <Route path='/login' exact component={Login} />
-        <Route path='/news' exact component={News} />
-        <Route path='/detail/:id' exact component={Detail} />
-        {/* <Route path='/' component={NewsSanbox}/> */}
-        <Route path='/' render={()=>
+            <Route path='/login' component={Login}/>
+            <Route path='/' render={()=>
             localStorage.getItem('token')?
-            <NewsSanbox></NewsSanbox>:
+            <NewsSandBox></NewsSandBox>:
             <Redirect to='/login'/>
+            //权限鉴定 如果token验证正确,则进入新闻后台系统页面，否则重新进入登录界面
         }/>
         </Switch>
-    </HashRouter>
+      </HashRouter>
+    </div>
   )
 }
