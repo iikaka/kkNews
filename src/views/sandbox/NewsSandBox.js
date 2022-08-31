@@ -30,8 +30,8 @@ export default function NewsSandBox() {
           <Switch>
               <Route path='/home' component={Home} />
               <Route path='/user-manage/list' component={UserList} />
-              <Route path='/user-manage/role/list' component={RoleList} />
-              <Route path='/user-manage/right/list' component={RightList} />
+              <Route path='/right-manage/role/list' component={RoleList} />
+              <Route path='/right-manage/right/list' component={RightList} />
               {/* 添加重定向 如果此时是/则to到home 加上 exact 实现精确匹配 */}
               <Redirect from='/' to='/home' exact />
               <Route path='*' component={NoPermission} />
