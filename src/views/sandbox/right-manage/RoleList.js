@@ -98,8 +98,7 @@ export default function RoleList() {
 
   return (
     <div>
-      <Table dataSource={dataSource} columns={columns} rowKey={(item)=>item.id}>
-      </Table>
+      <Table dataSource={dataSource} columns={columns} rowKey={(item)=>item.id}/>
       <Modal title="权限分配" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
         <Tree
           checkable
